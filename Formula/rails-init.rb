@@ -2,16 +2,17 @@
 class RailsInit < Formula
   desc "Initialize a Rails development environment on Mac."
   homepage ""
-  version "0.1.2"
+  version "0.1.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/radar/rails-init/releases/download/v0.1.2/rails-init_0.1.2_darwin_amd64.tar.gz"
-    sha256 "e448c23804e422874999fab0720abf8171b4b0fb8293b52eaee7e91f03b80a66"
+    url "https://github.com/radar/rails-init/releases/download/v0.1.3/rails-init_0.1.3_darwin_amd64.tar.gz"
+    sha256 "15b2626bc5ff953ba7e5d5529b7cd90de69587d32fd88deadb906e2729f5472a"
   elsif OS.linux?
   end
   
   depends_on "asdf"
+  depends_on "gpg"
 
   def install
     bin.install "rails-init"
